@@ -1,0 +1,8 @@
+
+Django==2.1.5
+django-cors-headers==3.1.1
+
+
+
+# Postgresql
+psycopg2==2.8.4
