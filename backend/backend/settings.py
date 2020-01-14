@@ -36,6 +36,15 @@ CORS_URLS_REGEX = (
 )  # we should only allow cors on certain url patterns. Feel free to change this if you have APIs elsewhere
 
 
+LOGGING = {  # In prod mode, django turns off logging. But we still want it because gae has nice error reporting
+    "version": 1,
+    "handlers": {"console": {"class": "logging.StreamHandler", "level": "INFO",},},
+    "loggers": {
+        "django": {"handlers": ["console"], "level": "INFO", "propagate": True},
+    },
+}
+
+
 ALLOWED_HOSTS = []
 
 
